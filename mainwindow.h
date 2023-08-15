@@ -22,6 +22,8 @@ public:
 private:
     Ui::MainWindow *ui;
 
+    bool work_mode;
+
     QSerialPort *serial;    // COM口
     QTimer *timer;          // 定时器
 
@@ -31,7 +33,7 @@ private:
     long long send_byte_cnt;// 发送字节数
     long long revc_byte_cnt;// 接收字节数
 
-    QStringList serialport_stringlist; // 端口链表
+    QStringList serialport_list; // 端口链表
 
 private slots:
 
